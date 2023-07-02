@@ -29,7 +29,7 @@ app.get("/api/:date", function (req, res) {
   // Checking if the request doesnot contain numbers
   if (!numsOnly) {
     const unixTimestamp = Date.parse(dateString);
-    const utcDate = new Date(unixTimestamp).toUTCString;
+    const utcDate = new Date(unixTimestamp).toUTCString();
 
     // checking if the string or text is true or correct
     unixTimestamp
@@ -54,6 +54,6 @@ app.get("/api/", (req, res) => {
 
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT || 3000, function () {
+var listener = app.listen(process.env.PORT || 3005, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
